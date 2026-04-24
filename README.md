@@ -108,9 +108,9 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 ### Materias Relevantes
 - ✅ Programación Orientada a Objetos (Java)
-- ✅ introduccion a Redes
-- ✅ Estructura de Datos 
-- 🔄 Computacion visual
+- ✅ Introducción a Redes
+- ✅ Estructura de Datos
+- 🔄 Computación Visual
 - 🔄 Base de Datos I (SQL, MySQL)
 
 ---
@@ -119,9 +119,10 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/killer13233)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-correo@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/killer13233)
+[![Gmail Personal](https://img.shields.io/badge/Gmail-martin03pl@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:martin03pl@gmail.com)
+[![Gmail UTA](https://img.shields.io/badge/UTA-mpalacios6776@uta.edu.ec-0072CE?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mpalacios6776@uta.edu.ec)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-0961351649-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/593961351649)
+[![GitHub](https://img.shields.io/badge/GitHub-killer13233-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/killer13233)
 
 </div>
 
