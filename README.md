@@ -98,7 +98,7 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 - ✅ Estructura de Datos y Algoritmos
 - ✅ Desarrollo Web (HTML, CSS, JavaScript)
 - 🔄 Ingeniería de Software
-- 🔄 Patrones de Diseño
+
 
 ---
 
