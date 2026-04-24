@@ -108,11 +108,10 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 ### Materias Relevantes
 - ✅ Programación Orientada a Objetos (Java)
-- ✅ Base de Datos I y II (SQL, MySQL)
-- ✅ Estructura de Datos y Algoritmos
-- ✅ Desarrollo Web (HTML, CSS, JavaScript)
-- 🔄 Ingeniería de Software
-- 🔄 Patrones de Diseño
+- ✅ introduccion a Redes
+- ✅ Estructura de Datos 
+- 🔄 Computacion visual
+- 🔄 Base de Datos I (SQL, MySQL)
 
 ---
 
