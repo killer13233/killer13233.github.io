@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio de Martín Palacios — Estudiante de Ingeniería en Software, UTA">
+<title>Martín Palacios | Portafolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:       #0a0a0f;
+    --bg2:      #111118;
+    --bg3:      #1a1a24;
+    --card:     #13131c;
+    --border:   #23233a;
+    --accent:   #5b8fff;
+    --accent2:  #7c3aed;
+    --green:    #22c55e;
+    --text:     #e8e8f0;
+    --muted:    #6b6b80;
+    --font:     'Space Grotesk', sans-serif;
+    --mono:     'JetBrains Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0;
+    background: rgba(10,10,15,0.92);
+    backdrop-filter: blur(14px);
+    z-index: 100;
+  }
+  .logo { font-family: var(--mono); font-size: 1rem; color: var(--accent); letter-spacing: .06em; }
+  .nav-links { display: flex; gap: 2.2rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: .875rem; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem;
+  }
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: .78rem;
+    color: var(--accent);
+    letter-spacing: .12em;
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  .hero-tag::before { content:''; width: 28px; height: 1px; background: var(--accent); }
+  h1 {
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.025em;
+    margin-bottom: 1.5rem;
+  }
+  h1 .gradient {
+    background: linear-gradient(130deg, var(--accent) 0%, var(--accent2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-desc { color: var(--muted); font-size: 1.1rem; max-width: 500px; margin-bottom: 2.5rem; line-height: 1.75; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--accent); color: #fff;
+    padding: .75rem 1.8rem; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: .95rem;
+    transition: opacity .2s;
+  }
+  .btn-primary:hover { opacity: .82; }
+  .btn-ghost {
+    border: 1px solid var(--border); color: var(--text);
+    padding: .75rem 1.8rem; border-radius: 8px;
+    text-decoration: none; font-weight: 500; font-size: .95rem;
+    background: transparent; transition: border-color .2s; cursor: pointer;
+  }
+  .btn-ghost:hover { border-color: var(--accent); }
+
+  /* ── STATS ── */
+  .stats-bar {
+    display: flex; gap: 3.5rem;
+    max-width: 860px; margin: 0 auto;
+    padding: 2rem 2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-num { font-size: 2rem; font-weight: 700; }
+  .stat-label { font-family: var(--mono); font-size: .75rem; color: var(--muted); letter-spacing: .05em; margin-top: .1rem; }
+
+  /* ── SECTIONS ── */
+  section { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
+
+  .sec-title {
+    font-family: var(--mono); font-size: .78rem;
+    color: var(--accent); letter-spacing: .12em;
+    margin-bottom: 2.2rem;
+    display: flex; align-items: center; gap: .75rem;
+  }
+  .sec-title::after { content:''; flex:1; height:1px; background: var(--border); }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: flex; flex-wrap: wrap; gap: .7rem; }
+  .skill-pill {
+    display: flex; align-items: center; gap: .45rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .45rem 1rem;
+    font-family: var(--mono); font-size: .82rem;
+    transition: border-color .2s;
+  }
+  .skill-pill:hover { border-color: var(--accent); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  /* ── PROJECTS ── */
+  .projects-grid { display: grid; gap: 1.25rem; }
+  .proj-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: border-color .25s, transform .25s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .proj-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .proj-card.featured { border-color: #5b3daa; background: linear-gradient(135deg, var(--card) 0%, rgba(124,58,237,.06) 100%); }
+  .proj-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .6rem; }
+  .proj-name { font-size: 1.05rem; font-weight: 600; }
+  .badge {
+    font-family: var(--mono); font-size: .68rem;
+    padding: .22rem .65rem; border-radius: 4px; letter-spacing: .05em;
+  }
+  .badge-feat { background: rgba(124,58,237,.15); color: #a78bfa; border: 1px solid rgba(124,58,237,.3); }
+  .badge-pub  { background: rgba(34,197,94,.1);  color: #4ade80;  border: 1px solid rgba(34,197,94,.25); }
+  .proj-desc { color: var(--muted); font-size: .88rem; line-height: 1.65; margin-bottom: 1.1rem; }
+  .proj-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1rem; }
+  .tag { font-family: var(--mono); font-size: .7rem; color: var(--muted); background: var(--bg3); padding: .22rem .6rem; border-radius: 4px; }
+  .proj-footer { display: flex; align-items: center; gap: 1.4rem; font-family: var(--mono); font-size: .78rem; color: var(--muted); }
+  .proj-footer a { margin-left: auto; color: var(--accent); text-decoration: none; }
+  .proj-footer a:hover { text-decoration: underline; }
+
+  /* ── ABOUT ── */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .about-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.25rem 1.5rem;
+  }
+  .about-label { font-family: var(--mono); font-size: .72rem; color: var(--muted); letter-spacing: .06em; margin-bottom: .3rem; }
+  .about-val { font-size: .95rem; font-weight: 500; }
+
+  .courses { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .6rem; }
+  .course {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 6px; padding: .4rem .9rem;
+    font-size: .82rem; color: var(--muted);
+    display: flex; align-items: center; gap: .4rem;
+  }
+  .course.done { color: var(--green); border-color: rgba(34,197,94,.25); }
+
+  /* ── CONTACT ── */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.2rem 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+    text-decoration: none; color: inherit;
+    transition: border-color .2s;
+  }
+  .contact-card:hover { border-color: var(--accent); }
+  .contact-icon {
+    width: 42px; height: 42px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: .85rem; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .contact-label { font-family: var(--mono); font-size: .72rem; color: var(--muted); letter-spacing: .05em; }
+  .contact-val { font-size: .9rem; font-weight: 500; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: .76rem;
+    color: var(--muted);
+  }
+
+  /* ── SPINNER ── */
+  .loading { text-align: center; padding: 3rem; color: var(--muted); font-family: var(--mono); font-size: .82rem; }
+  .spinner {
+    display: inline-block; width: 22px; height: 22px;
+    border: 2px solid var(--border); border-top-color: var(--accent);
+    border-radius: 50%; animation: spin .8s linear infinite; margin-bottom: .8rem;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .error-msg {
+    background: rgba(226,75,74,.08); border: 1px solid rgba(226,75,74,.2);
+    border-radius: 8px; padding: 1.2rem; color: #f87171;
+    font-family: var(--mono); font-size: .82rem;
+  }
+  .error-msg a { color: #f87171; }
+
+  /* ── FADE-IN ── */
+  .fade { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+  .fade.show { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .stats-bar { gap: 1.8rem; flex-wrap: wrap; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">mp.dev</div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#contact">Contacto</a>
+    <a href="https://github.com/killer13233" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero fade">
+  <div class="hero-tag">Disponible para proyectos y colaboraciones</div>
+  <h1>Hola, soy<br><span class="gradient">Martín Palacios</span></h1>
+  <p class="hero-desc">Estudiante de Ingeniería en Software en la UTA · 4to Semestre. Construyo soluciones con Java, JavaScript y SQL.</p>
+  <div class="hero-btns">
+    <a href="https://github.com/killer13233" target="_blank" rel="noopener" class="btn-primary">Ver GitHub ↗</a>
+    <a href="#projects" class="btn-ghost">Mis proyectos</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar fade">
+  <div>
+    <div class="stat-num" id="repo-count">—</div>
+    <div class="stat-label">repositorios</div>
+  </div>
+  <div>
+    <div class="stat-num">4to</div>
+    <div class="stat-label">semestre UTA</div>
+  </div>
+  <div>
+    <div class="stat-num">3</div>
+    <div class="stat-label">lenguajes</div>
+  </div>
+  <div>
+    <div class="stat-num" id="star-count">—</div>
+    <div class="stat-label">estrellas</div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills" class="fade">
+  <div class="sec-title">// stack tecnológico</div>
+  <div class="skills-grid">
+    <div class="skill-pill"><span class="dot" style="background:#f89820"></span>Java</div>
+    <div class="skill-pill"><span class="dot" style="background:#f7df1e"></span>JavaScript</div>
+    <div class="skill-pill"><span class="dot" style="background:#4479a1"></span>SQL</div>
+    <div class="skill-pill"><span class="dot" style="background:#00758f"></span>MySQL</div>
+    <div class="skill-pill"><span class="dot" style="background:#336791"></span>PostgreSQL</div>
+    <div class="skill-pill"><span class="dot" style="background:#e34f26"></span>HTML5</div>
+    <div class="skill-pill"><span class="dot" style="background:#1572b6"></span>CSS3</div>
+    <div class="skill-pill"><span class="dot" style="background:#f05032"></span>Git</div>
+    <div class="skill-pill"><span class="dot" style="background:#e8e8f0"></span>GitHub</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+  <div class="sec-title">// proyectos de github</div>
+  <div class="projects-grid" id="projects-container">
+    <div class="loading">
+      <div class="spinner"></div><br>
+      Cargando repositorios de killer13233...
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+  <div class="sec-title">// sobre mí</div>
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="about-label">universidad</div>
+      <div class="about-val">Universidad Técnica de Ambato</div>
+    </div>
+    <div class="about-card">
+      <div class="about-label">carrera</div>
+      <div class="about-val">Ingeniería en Software</div>
+    </div>
+    <div class="about-card">
+      <div class="about-label">semestre actual</div>
+      <div class="about-val">4to Semestre · 2025</div>
+    </div>
+    <div class="about-card">
+      <div class="about-label">ubicación</div>
+      <div class="about-val">Ambato, Ecuador 🇪🇨</div>
+    </div>
+  </div>
+  <div class="courses">
+    <div class="course done">✓ POO con Java</div>
+    <div class="course done">✓ Base de Datos I y II</div>
+    <div class="course done">✓ Estructura de Datos</div>
+    <div class="course done">✓ Desarrollo Web</div>
+    <div class="course">↻ Ingeniería de Software</div>
+    <div class="course">↻ Patrones de Diseño</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <div class="sec-title">// conectemos</div>
+  <div class="contact-grid">
+    <a href="https://github.com/killer13233" target="_blank" rel="noopener" class="contact-card">
+      <div class="contact-icon" style="background:rgba(255,255,255,.05); color:var(--text)">GH</div>
+      <div>
+        <div class="contact-label">github</div>
+        <div class="contact-val">@killer13233</div>
+      </div>
+    </a>
+    <a href="mailto:tu-correo@gmail.com" class="contact-card">
+      <div class="contact-icon" style="background:rgba(91,143,255,.1); color:var(--accent)">@</div>
+      <div>
+        <div class="contact-label">correo</div>
+        <div class="contact-val">tu-correo@gmail.com</div>
+      </div>
+    </a>
+    <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener" class="contact-card">
+      <div class="contact-icon" style="background:rgba(10,102,194,.12); color:#5b8fff">in</div>
+      <div>
+        <div class="contact-label">linkedin</div>
+        <div class="contact-val">Martín Palacios</div>
+      </div>
+    </a>
+    <div class="contact-card">
+      <div class="contact-icon" style="background:rgba(34,197,94,.1); color:var(--green)">UTA</div>
+      <div>
+        <div class="contact-label">universidad</div>
+        <div class="contact-val">Ambato · Ecuador</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Martín Palacios © 2025 · Ingeniería en Software · UTA Ambato · Construido con HTML, CSS y JS puro</p>
+</footer>
+
+<script>
+const USERNAME = 'killer13233';
+const FEATURED  = 'SistemaFacturacion';
+
+const langColors = {
+  Java:'#f89820', JavaScript:'#f7df1e', Python:'#3776ab',
+  SQL:'#4479a1', HTML:'#e34f26', CSS:'#1572b6',
+  TypeScript:'#3178c6', PHP:'#777bb3', 'C#':'#239120'
+};
+
+function dot(lang){
+  const c = langColors[lang] || '#6b6b80';
+  return `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${c};margin-right:4px;vertical-align:middle;"></span>`;
+}
+
+async function loadRepos(){
+  try {
+    const [uRes, rRes] = await Promise.all([
+      fetch(`https://api.github.com/users/${USERNAME}`),
+      fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100&sort=updated`)
+    ]);
+    const user  = await uRes.json();
+    const repos = await rRes.json();
+    if (!Array.isArray(repos)) throw new Error('No se pudieron cargar los repos');
+
+    document.getElementById('repo-count').textContent = user.public_repos ?? repos.length;
+    document.getElementById('star-count').textContent  = repos.reduce((s,r)=>s+(r.stargazers_count||0),0);
+
+    const feat   = repos.find(r => r.name === FEATURED);
+    const others = repos.filter(r => r.name !== FEATURED && !r.fork)
+                        .sort((a,b) => b.updated_at.localeCompare(a.updated_at))
+                        .slice(0, 4);
+    const list   = feat ? [feat, ...others.slice(0,3)] : others;
+
+    if (!list.length){
+      document.getElementById('projects-container').innerHTML =
+        `<div class="error-msg">// sin repositorios públicos todavía — <a href="https://github.com/${USERNAME}" target="_blank">visita el perfil</a></div>`;
+      return;
+    }
+
+    document.getElementById('projects-container').innerHTML = list.map(r => {
+      const isFeat = r.name === FEATURED;
+      const updated = new Date(r.updated_at).toLocaleDateString('es-EC',{year:'numeric',month:'short'});
+      return `
+      <a class="proj-card${isFeat?' featured':''}" href="${r.html_url}" target="_blank" rel="noopener">
+        <div class="proj-head">
+          <span class="proj-name">${r.name}</span>
+          <span class="badge ${isFeat?'badge-feat':'badge-pub'}">${isFeat?'DESTACADO':'PÚBLICO'}</span>
+        </div>
+        <p class="proj-desc">${r.description || 'Sin descripción — visita el repositorio para más detalles.'}</p>
+        <div class="proj-tags">
+          ${r.language ? `<span class="tag">${r.language}</span>` : ''}
+          ${(r.topics||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}
+        </div>
+        <div class="proj-footer">
+          ${r.language ? `<span>${dot(r.language)}${r.language}</span>` : ''}
+          <span>★ ${r.stargazers_count}</span>
+          <span>⑂ ${r.forks_count}</span>
+          <span style="margin-left:auto;color:var(--muted);">actualizado ${updated}</span>
+        </div>
+      </a>`;
+    }).join('');
+  } catch(e){
+    document.getElementById('projects-container').innerHTML =
+      `<div class="error-msg">// error al cargar: ${e.message}<br>
+       <a href="https://github.com/${USERNAME}" target="_blank">→ ir a github.com/${USERNAME}</a></div>`;
+  }
+}
+
+loadRepos();
+
+// fade-in on scroll
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+},{threshold:.1});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
