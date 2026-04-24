@@ -50,11 +50,11 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 <div align="center">
 
-![Martin's GitHub Stats](https://github-readme-stats.vercel.app/api?username=martinpalacios&show_icons=true&theme=tokyonight&hide_border=true&locale=es)
+![Martin's GitHub Stats](https://github-readme-stats.vercel.app/api?username=killer13233&show_icons=true&theme=tokyonight&hide_border=true&locale=es)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=martinpalacios&layout=compact&theme=tokyonight&hide_border=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=killer13233&layout=compact&theme=tokyonight&hide_border=true)
 
-![GitHub Streak](https://streak-stats.demolab.com?user=martinpalacios&theme=tokyonight&hide_border=true&locale=es)
+![GitHub Streak](https://streak-stats.demolab.com?user=killer13233&theme=tokyonight&hide_border=true&locale=es)
 
 </div>
 
@@ -62,13 +62,27 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 ## 🚀 Proyectos Destacados
 
-> 🔧 *Actualmente construyendo mi portafolio. ¡Pronto habrá proyectos aquí!*
+### 🧾 [SistemaFacturacion](https://github.com/killer13233/SistemaFacturacion)
+
+> Sistema de facturación desarrollado como proyecto académico en la UTA.
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/Estado-En%20desarrollo-yellow?style=flat-square)
+
+**Características:**
+- 📄 Generación y gestión de facturas
+- 🗄️ Persistencia de datos con SQL
+- 👥 Gestión de clientes y productos
+- 💰 Cálculo automático de totales e impuestos
+
+---
+
+### 📁 Más proyectos en mi GitHub
 
 | Proyecto | Descripción | Tecnologías |
 |----------|-------------|-------------|
-| 🏦 Sistema Bancario | CRUD con manejo de cuentas y transacciones | Java, SQL |
-| 🛒 Tienda Online | Catálogo de productos con carrito de compras | JavaScript, HTML, CSS |
-| 📊 Gestión de BD | Consultas avanzadas y diseño de base de datos | MySQL, PostgreSQL |
+| 🔜 Próximamente | Proyectos en desarrollo en la UTA | Java, JS, SQL |
 
 ---
 
@@ -76,7 +90,7 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 <div align="center">
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=martinpalacios&theme=tokyo-night&hide_border=true)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=killer13233&theme=tokyo-night&hide_border=true)
 
 </div>
 
@@ -98,7 +112,7 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 - ✅ Estructura de Datos y Algoritmos
 - ✅ Desarrollo Web (HTML, CSS, JavaScript)
 - 🔄 Ingeniería de Software
-
+- 🔄 Patrones de Diseño
 
 ---
 
@@ -106,9 +120,9 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/martinpalacios)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/killer13233)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-correo@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/martinpalacios)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/killer13233)
 
 </div>
 
@@ -122,7 +136,7 @@ Soy estudiante de **Ingeniería en Software** en la **Universidad Técnica de Am
 
 ---
 
-![Visitor Count](https://komarev.com/ghpvc/?username=martinpalacios&color=2e97f7&style=flat-square&label=Visitas+al+perfil)
+![Visitor Count](https://komarev.com/ghpvc/?username=killer13233&color=2e97f7&style=flat-square&label=Visitas+al+perfil)
 
 ⭐ **Si algo de lo que hago te parece útil, ¡dale una estrella!** ⭐
 
